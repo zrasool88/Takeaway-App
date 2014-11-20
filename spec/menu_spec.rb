@@ -1,19 +1,29 @@
 require 'menu'
+require 'dish'
 
 describe 'The Menu' do
 	let (:menu){Menu.new}
+	let (:dish){Dish.new("Slowly Digested Penguin", 250)}
+	let (:dish2){Dish.new("Rapist Seal", 500)}
 
-	it 'List is a hash' do
-		expect(menu.list.class).to eq Hash
+	it 'Dishes is an array' do
+		expect(menu.dishes.class).to eq Array
 	end
 
-	it 'Can put dish names and prices into the menu list' do
-		menu.add_dish("burger", 3)
-		expect(menu.list.empty?).to be false
+	it 'Can add dish to menu' do
+		menu.add(dish)
+		expect(menu.dishes.empty?).to be false
 	end
 
-	it 'Can retrieve values from the list hash using keys' do
-		menu.add_dish("burger", 3)
-		expect(menu.list.fetch("burger")).to eq 3
+	it 'Can remove dish from menu' do
+		menu.add(dish)
+		menu.remove(dish)
+		expect(menu.dishes.empty?).to be true
+	end
+
+	it 'Can list all the dishes in the menu' do
+		menu.add(dish)
+		menu.add(dish2)
+		expect(menu.list_dishes).to eq([dish, dish2])
 	end
 end

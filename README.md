@@ -19,18 +19,13 @@ Week 2 Challenge @ Makers Academy. Writing a small take-away app in Ruby. The AP
 * Make sure that your Takeaway app is thoroughly tested and that you use mocks and/or stubs, as necessary to not to send texts when your tests are run
 * However, if your Takeaway app is loaded into IRB and the order is placed, the text should actually be sent
 
-# Constraints
-
-* No "Puts" statement
-* No "Gets" method
-
 # CRC
 
-* Menu: A class with a menu HASH with name of dishes and their price as key value pairs. Dishes can be ADDED to and REMOVED from the menu. Existing Dishes names and prices can be UPDATED.
+* Menu: A class with a menu HASH with name of dishes and their price as key value pairs. Dishes can be ADDED to and REMOVED from the menu.
 
 * Order: Orders are constructed by choosing dishes from the menu. Orders are individual for each customer. Orders are comprised of the name of dishes and their quantities.
 
-* Dish: A class with two attributes, name and price. Dishes are LISTED in the MENU. 
+* Dish: A class with two attributes, name and price. Dishes are LISTED on the MENU. 
 
 * Line Item: A class comprising of dishes, quantities, discounts & taxes, total.
 
