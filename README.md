@@ -15,3 +15,4 @@ Week 2 Challenge @ Makers Academy. Writing a small take-away app in Ruby. Object
 
 # CRC
 
+* Menu: A class with a menu hash with name of dishes and their price as key value pairs
