@@ -32,4 +32,3 @@ Week 2 Challenge @ Makers Academy. Writing a small take-away app in Ruby. The AP
 * TakeAway: App class that brings together functionality of all the separate classes into one.
 
 * Customer: Customer PLACES order by CHOOSING items from a menu. Customer is IDENTIFIED by NAME and CONTACT DETAILS.
-
