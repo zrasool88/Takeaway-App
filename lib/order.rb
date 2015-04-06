@@ -3,7 +3,7 @@ class Order
 	attr_reader :items
 
 	def initialize
-		@items = []
+		@items = {}
 		@complete = false
 	end
 

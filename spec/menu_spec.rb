@@ -4,7 +4,7 @@ require 'dish'
 describe 'The Menu' do
 	let (:menu){Menu.new}
 	let (:dish){Dish.new("Slowly Digested Penguin", 250)}
-	let (:dish2){Dish.new("Rapist Seal", 500)}
+	let (:dish2){Dish.new("Stubborn Seal", 500)}
 
 	it 'Dishes is an array' do
 		expect(menu.dishes.class).to eq Array

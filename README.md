@@ -23,7 +23,7 @@ Week 2 Challenge @ Makers Academy. Writing a small take-away app in Ruby. The AP
 
 * Menu: A class with a menu HASH with name of dishes and their price as key value pairs. Dishes can be ADDED to and REMOVED from the menu.
 
-* Order: Orders are constructed by choosing dishes from the menu. Orders are individual for each customer. Orders are comprised of the name of dishes and their quantities.
+* Order: Orders are constructed by choosing dishes from the menu. Orders are individual for each customer. Orders are comprised of the name of dishes and their quantities. Orders can be complete or incomplete.
 
 * Dish: A class with two attributes, name and price. Dishes are LISTED on the MENU. 
 
