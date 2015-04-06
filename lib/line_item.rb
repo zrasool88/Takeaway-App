@@ -1,8 +1,9 @@
 class LineItem
 
-  attr_reader :dish
+  attr_reader :dish, :quantity
 
-  def initialize(dish=Dish.new("chips", 5))
+  def initialize(dish, quantity)
     @dish=dish
+    @quantity=quantity
   end
 end
