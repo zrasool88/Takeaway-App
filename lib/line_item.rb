@@ -6,4 +6,8 @@ class LineItem
     @dish=dish
     @quantity=quantity
   end
+
+  def subtotal
+    dish.price * quantity
+  end
 end

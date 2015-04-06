@@ -16,4 +16,8 @@ describe 'Line Item' do
     expect(line_item.quantity).to eq 2
   end
 
+  it 'has a subtotal' do
+    expect(line_item.subtotal).to eq 10
+  end
+
 end
