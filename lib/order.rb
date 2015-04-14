@@ -19,11 +19,7 @@ class Order
     @items.delete(line_item)
   end
 
-  def line_total(line_item)
-    line_item.subtotal
-  end
-
   def total
-    items.map{|lineitem| lineitem.subtotal}.inject(&:+)
+    items.map{|lineitem| lineitem.line_total}.inject(:+)
   end
 end

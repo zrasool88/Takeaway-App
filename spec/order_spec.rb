@@ -32,11 +32,6 @@ describe 'Order' do
     expect(order.items.count).to eq 0
   end
 
-  it "is able to get subtotal of a line item" do
-    order.add_line_item(line_item)
-    expect(order.line_total(line_item)).to eq 20
-  end
-
   it "is able to total all line items" do
     order.add_line_item(line_item)
     order.add_line_item(line_item2)
