@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'twilio-ruby', '~> 3.12'
-gem 'envyable'
+gem 'dotenv'
 
 group :test do
   gem 'rspec'

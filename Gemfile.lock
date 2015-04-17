@@ -3,7 +3,7 @@ GEM
   specs:
     builder (3.2.2)
     diff-lcs (1.2.5)
-    envyable (0.2.0)
+    dotenv (2.0.1)
     jwt (1.4.1)
     multi_json (1.11.0)
     rspec (3.1.0)
@@ -27,6 +27,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  envyable
+  dotenv
   rspec
   twilio-ruby (~> 3.12)
