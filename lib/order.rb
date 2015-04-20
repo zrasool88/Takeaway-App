@@ -8,11 +8,6 @@ class Order
 
 	def initialize
 		@items = []
-		@complete = false
-	end
-
-	def complete?
-		@complete
 	end
 
   def add_line_item(line_item)
