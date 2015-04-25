@@ -7,7 +7,7 @@ class Customer
     @phone_number = number
   end
 
-  def payment(amount)
+  def pay(amount)
     @payment = amount
   end
 end
