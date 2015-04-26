@@ -5,6 +5,7 @@ require 'dish'
 require 'line_item'
 
 describe Takeaway do
+
   let(:takeaway){Takeaway.new}
   let(:customer){Customer.new("Zeeshan", "07941234584")}
   let(:order){Order.new}
@@ -29,7 +30,8 @@ describe Takeaway do
       expect{takeaway.verify_payment(customer, order)}.to raise_error (RuntimeError)
     end
 
-    it "sends a confirmation text message" do
+    it "can send a confirmation text message" do
+      expect(takeaway.send_text(enviroment="testing")).to eq "Message Sent Successfully"
     end
   end
 end
