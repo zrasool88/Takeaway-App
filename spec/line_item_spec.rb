@@ -1,11 +1,11 @@
 require 'line_item'
 
-describe 'Line Item' do
-  let(:dish){double :dish, :name => "chips", :price => 5}
-  let(:line_item){LineItem.new(dish, 2)}
+describe LineItem do
+  let(:line_item) { described_class.new(dish, 2) }
+  let(:dish) { double :dish, name: 'chips', price: 5 }
 
   it 'has name of a dish' do
-    expect(line_item.dish.name).to eq "chips"
+    expect(line_item.dish.name).to eq 'chips'
   end
 
   it 'has the price of the dish' do

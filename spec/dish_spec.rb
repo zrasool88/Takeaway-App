@@ -1,13 +1,13 @@
 require 'dish'
 
-describe 'A Dish' do
-	it 'has a name' do
-		dish = Dish.new("Slowly Digested Penguin", 250)
-		expect(dish.name).to eq "Slowly Digested Penguin"
-	end
+describe Dish do
+  let(:dish) { described_class.new('Slowly Digested Penguin', 250) }
 
-	it 'has a price' do
-		dish = Dish.new("Slowly Digested Penguin", 250)
-		expect(dish.price).to eq 250
-	end
+  it 'has a name' do
+    expect(dish.name).to eq 'Slowly Digested Penguin'
+  end
+
+  it 'has a price' do
+    expect(dish.price).to eq 250
+  end
 end

@@ -2,19 +2,18 @@ require 'twilio-ruby'
 require 'dotenv'
 
 module Twilio
-
   def send_message(body)
     setup_twilio
-    message = @client.account.messages.create(
-      :to => ENV['CUST_NUM'],
-      :from => ENV['TWILIO_NUM'],
-      :body => body
-      )
-    return "Message Sent Successfully"
+    @client.account.messages.create(
+      to: ENV['CUST_NUM'],
+      from: ENV['TWILIO_NUM'],
+      body: body
+    )
+    'Message Sent Successfully'
   end
 
   def load_env_vars(environment)
-    if environment == "production"
+    if environment == 'production'
       Dotenv.load('./dot.env')
     else
       Dotenv.load('./dot.env.testing')

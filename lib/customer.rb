@@ -1,5 +1,4 @@
 class Customer
-
   attr_reader :name, :phone_number, :payment
 
   def initialize(name, number)

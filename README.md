@@ -4,10 +4,10 @@ Week 2 Challenge @ Makers Academy. Writing a small take-away app in Ruby. The AP
 
 # Learning Objectivs
 
-* Employing Single Responsibility principle
+* Employing Single Responsibility Principle
 * How to work with APIs in Ruby. 
 
-# Instructions
+# Project Spec
 
 * Write an app called Takeaway.
 * Implement the following functionality:
@@ -19,16 +19,64 @@ Week 2 Challenge @ Makers Academy. Writing a small take-away app in Ruby. The AP
 * Make sure that your Takeaway app is thoroughly tested and that you use mocks and/or stubs, as necessary to not to send texts when your tests are run
 * However, if your Takeaway app is loaded into IRB and the order is placed, the text should actually be sent
 
-# CRC
+# Class - Responsibility - Collaborator
 
-* Menu: A class with a menu HASH with name of dishes and their price as key value pairs. Dishes can be ADDED to and REMOVED from the menu.
+## Customer Class
+Responsibilities        | Collaborators
+----------------        | -------------
+Has a customer name     | Self
+Has a contact number    | Self
+Can pay for their order | Takeaway
 
-* Order: Orders are constructed by choosing dishes from the menu. Orders are individual for each customer. Orders are comprised of the name of dishes and their quantities. Orders can be complete or incomplete.
+## Dish Class
+Responsibilities      | Collaborators
+----------------      | -------------
+Has a name            | self
+Has a price           | self
+Included in Menu      | Menu
+Included in Line Item | LineItem
 
-* Dish: A class with two attributes, name and price. Dishes are LISTED on the MENU. 
+## Menu Class
+Responsibilities      | Collaborators
+----------------      | -------------
+Can add a dish        | Dish
+Can remove a dish     | Dish
+Can list all dishes   | Dish
 
-* Line Item: A class comprising of dishes, quantities, discounts & taxes, total.
+## LineItem Class
+Responsibilities        | Collaborators
+----------------        | -------------
+Has the name of a dish  | Dish
+Has the price of a dish | Dish
+Has quantity of dish    | Self
+Has a line total        | Self, Dish
+Included in Order       | Order
 
-* TakeAway: App class that brings together functionality of all the separate classes into one.
+## Order Class
+Responsibilities      | Collaborators
+----------------      | -------------
+Can add a Line Item   | LineItem
+Can remove Line Item  | LineItem
+Can total Line Items  | LineItem
+Included in Takeaway  | Takeaway
 
-* Customer: Customer PLACES order by CHOOSING items from a menu. Customer is IDENTIFIED by NAME and CONTACT DETAILS.
+## Takeaway Class
+Responsibilities                      | Collaborators
+----------------                      | -------------
+Can send a confirmation text message  | Twilio
+Can accept orders                     | Order
+Accepts & verifies payment            | Customer
+Processes orders                      | Order, Customer
+
+#How To Use
+1) Clone Repository
+2) CD into the project directory
+3) Run bundle install to install dependencies
+4) The Twilio GEM needs credentials
+  - Create an account on Twilio and get your account_sid and auth_key
+5) These credentials are put in a dotenv file, an example file is provided in the root folder
+  - Create two files in the project root folder: dot.env and dot.env.testing
+  - Put your developer credentials in dot.env
+  - Using the same enviroment variable names, put the testing credentials (available from Twilio's developer testing section) in the dot.env.testing file
+6) Verify that everything works by running tests using the 'rspec' command
+7) Load runner.rb in IRB and have fun!
