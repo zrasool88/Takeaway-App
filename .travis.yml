@@ -1,11 +1,21 @@
 language: ruby
 cache: bundler
-
-rvm: 
-  - "2.1.2" 
-
-script: bundle exec rspec
-
+rvm:
+- 2.1.2
+env:
+  global:
+  - secure: Z3aGuobVDm8YR2jvDxO2chICK+0ZHhbp04WspXgw/7S4IbVU4E+guU4o2hH+MeGqAjki2y+BNqmY1ewdiIPjZPdW4aNtvWJRq4MvKrQ/lyIAF1Tl/JHaQJlCe4LT+B+lMnaaVHwB7aaXuYZaWuqr60XMHU7QiVCGxPP3NxC8LRs=
+  - secure: A2RzSJfUMIbpkw66Bnpm2WpoGkjQ4C5SS1dpnDYVjsA4/tj1Z1BHL1gTZjnZUzAhgyy0JdUPetqJGXBT7zT7hbFoXOfbjXAPxwNKaNQx6eTFwlcfT+5wM12J5yXmtpXoLFD+nXWwuuFs5PYn48cDIoGvwVpHg4fwlQfD4uVGao4=
+  - secure: DMraYXXpD//e1LEBi6FdmYZ5mUDhKwSWDMK8kHoARqjFoVhAprYHjBGugyk+30V5TUOLuZTuGLmDWDoLglvsmXbclZ9HFzKk2bt85rdJF+kx7ayME/EbfYTkdSz9PpWl/XPlUODiMbQLz+dwjBq9yBiDwCqXSkXm6OVf5nRUYR4=
+  - secure: O5GlEeeoyK3UNX6s0gHJIs0Jugt1sp4zY03MaJ5o6lsJM3oKTn9clB8pD5ZdS2FiPfrhoHNpK0sv39DWby8jDM6bG/aN951h3yjF8s7tFW1aiSMJaPK1gl8SHUg5zJsVxf8GaoO1Js9Yobc0C05kTk4wcDSOxXsEsD35G0hPpPE=
+  - secure: S5zIV4HF6LxM6aZnZ16b3bOIEMRzSE7KjZ748cworOt8BmPtCLvFKlStmFfkaapO2r3m7ttbpfM9X/wdOM9yUVa+luYeRfH4VSSSDPDJmliLC0Ovjhg2qUQgRKoRR8nQF+EajMRLW45hQPIRB4xDKdIJp+/S/fDcJqdnPnym+U4=
+  - secure: WuUpvsw4m/TMeDkHLvZV5rRMddO5CHYt19HdJ35kFne0lAPOKLBZ3mRIohne89XtV7a5UIGEGwmcyH1HaimLAKku+psz9wXuZ7j63znWSKOmhrE7gKbzP+mQlDUO5t+8KdDPBST07NzButIJ/8j1DXpha55J+2GM9OWtKh34bTw=
+  - secure: eUmbDMMrTKZW3oWlpvybWA+l92WO+KVOS2fZbd5t/0+OsVcgLhPShGjh/nnk6/K1YKIjVIyGoVVocTRnLcIVpRju7b7eT5XR6ddnc32I8XE96QYtEAVICQzBCgTxy9a8nvctBt6F5CYCeUGH1VB+0/2b7P3VotzThIOur1e7C0U=
+  - secure: F1uifATUy/XtcE9yzDlLLnNGdLzl/T8IcOpSnCsXyeKcC0IHJJcCDCyICs3caEIBS9qFO16YB7NhOy5CQHh82+MTc7dzlxWP3oDhoN7cnt1pudSljN6fvS1EZN6h5cdQa/3yyAp2GwwWxNjre7rYfUWIvMy+dcUiHQJt3HGSDSQ=
+script:
+- cp .env.example .env
+- cp .env.example .env.testing
+- bundle exec rspec
 addons:
   code_climate:
     repo_token: 91d8d40bfa133fce6d298bf9045be399cfb3cfc28f609128ce0044ce1f179a9f

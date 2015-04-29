@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'twilio-ruby', '>= 3.12'
+gem 'twilio-ruby', '>= 4.0.0'
 gem 'dotenv'
 
 group :test do
@@ -11,6 +11,7 @@ end
 group :development do
   gem 'rubocop', require: false
   gem 'rubocop-rspec'
+  gem 'travis'
 end
   
 

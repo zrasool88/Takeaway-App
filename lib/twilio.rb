@@ -14,9 +14,9 @@ module Twilio
 
   def load_env_vars(environment)
     if environment == 'production'
-      Dotenv.load('./dot.env')
+      Dotenv.load('./.env')
     else
-      Dotenv.load('./dot.env.testing')
+      Dotenv.load('./.env.testing')
     end
   end
 
