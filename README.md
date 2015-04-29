@@ -71,14 +71,14 @@ Accepts & verifies payment            | Customer
 Processes orders                      | Order, Customer
 
 #How To Use
-1) Clone Repository
-2) CD into the project directory
-3) Run bundle install to install dependencies
-4) The Twilio GEM needs credentials
+1. Clone Repository
+2. CD into the project directory
+3. Run bundle install to install dependencies
+4. The Twilio GEM needs credentials
   - Create an account on Twilio and get your account_sid and auth_key
-5) These credentials are put in a dotenv file, an example file is provided in the root folder
+5. These credentials are put in a dotenv file, an example file is provided in the root folder
   - Create two files in the project root folder: dot.env and dot.env.testing
   - Put your developer credentials in dot.env
   - Using the same enviroment variable names, put the testing credentials (available from Twilio's developer testing section) in the dot.env.testing file
-6) Verify that everything works by running tests using the 'rspec' command
-7) Load runner.rb in IRB and have fun!
+6. Verify that everything works by running tests using the 'rspec' command
+7. Load runner.rb in IRB and have fun!
