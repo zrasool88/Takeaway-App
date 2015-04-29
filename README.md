@@ -77,7 +77,7 @@ Processes orders                      | Order, Customer
 4. The Twilio GEM needs credentials
   - Create an account on Twilio and get your account_sid and auth_key
 5. These credentials are put in a dotenv file, an example file is provided in the root folder
-  - Create two files in the project root folder: dot.env and dot.env.testing
+  - Create two files in the project root folder: .env and .env.testing
   - Put your developer credentials in dot.env
   - Using the same enviroment variable names, put the testing credentials (available from Twilio's developer testing section) in the dot.env.testing file
 6. Verify that everything works by running tests using the 'rspec' command
