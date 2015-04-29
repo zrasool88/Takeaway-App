@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/zrasool88/Takeaway-App/badges/gpa.svg)](https://codeclimate.com/github/zrasool88/Takeaway-App) [![Test Coverage](https://codeclimate.com/github/zrasool88/Takeaway-App/badges/coverage.svg)](https://codeclimate.com/github/zrasool88/Takeaway-App) [![Build Status](https://travis-ci.org/zrasool88/Takeaway-App.svg)](https://travis-ci.org/zrasool88/Takeaway-App) [![Dependency Status](https://gemnasium.com/zrasool88/Takeaway-App.svg)](https://gemnasium.com/zrasool88/Takeaway-App)
+
 # Description
 	
 Week 2 Challenge @ Makers Academy. Writing a small take-away app in Ruby. The API that we'll be using the Twilio API to send text messages confirming a successful order.
